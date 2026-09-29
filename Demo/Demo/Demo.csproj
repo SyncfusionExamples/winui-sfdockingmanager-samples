@@ -27,7 +27,9 @@
   <ItemGroup>
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.DockingManager.WinUI" Version="35.1.37" />
+  </ItemGroup>
   <!--
     Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
     Tools extension to be activated for this project even if the Windows App SDK Nuget
