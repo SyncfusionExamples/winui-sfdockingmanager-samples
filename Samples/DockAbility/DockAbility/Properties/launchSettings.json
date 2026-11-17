@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DockAbility (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "DockAbility (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
