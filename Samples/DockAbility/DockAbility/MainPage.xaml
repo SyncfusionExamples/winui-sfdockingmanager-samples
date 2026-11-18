@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="DockAbility.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:DockAbility"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:docking="using:Syncfusion.UI.Xaml.Docking"
+    mc:Ignorable="d">
+
+    <Grid>
+
+        <!-- Docking Manager: all six docking options with per-pane DockAbility, AllowAutoHide, and AllowFloat -->
+        <docking:SfDockingManager x:Name="dockingManager"
+                                  >
+
+            <!-- Top Docked Pane -->
+            <docking:DockPane x:Name="TopPane"
+                              Header="Top Docked"
+                              DockDirection="Top"
+                              DockState="Docked"
+                              DockAbility="Top">
+                <Grid Margin="12">
+                    <StackPanel Spacing="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Top Docked Pane" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="DockAbility='Top'"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </docking:DockPane>
+
+            <!-- Left Docked Pane -->
+            <docking:DockPane x:Name="LeftPane"
+                              Header="Left Docked"
+                              DockDirection="Left"
+                              DockState="Docked"
+                              DockAbility="Left">
+                <Grid Margin="12">
+                    <StackPanel Spacing="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Left Docked Pane" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="DockAbility='Left'"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   HorizontalAlignment="Center"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+            </docking:DockPane>
+
+            <!-- Right Docked Pane -->
+            <docking:DockPane x:Name="RightPane"
+                              Header="Right Docked"
+                              DockDirection="Right"
+                              DockState="Docked"
+                              DockAbility="Right">
+                <Grid Margin="12">
+                    <StackPanel Spacing="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Right Docked Pane" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="DockAbility='Right'"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   HorizontalAlignment="Center"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+            </docking:DockPane>
+
+            <!-- Bottom Docked Pane -->
+            <docking:DockPane x:Name="BottomPane"
+                              Header="Bottom Docked"
+                              DockDirection="Bottom"
+                              DockState="Docked"
+                              DockAbility="Bottom">
+                <Grid Margin="12">
+                    <StackPanel Spacing="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Bottom Docked Pane" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="DockAbility='Bottom'"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </docking:DockPane>
+
+            <!-- Document Window (Center) -->
+            <docking:DockPane x:Name="DocumentPane"
+                              Header="Document"
+                              DockState="Document"
+                              DockAbility="Document">
+                <Grid Margin="16">
+                    <StackPanel Spacing="8" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Document State"
+                                   FontSize="18"
+                                   FontWeight="SemiBold"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="DockAbility='Document'"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </docking:DockPane>
+
+            <!-- Tabbed with Bottom Pane -->
+            <docking:DockPane x:Name="TabbedPane"
+                              Header="Tabbed (with Bottom)"
+                              DockState="Tabbed"
+                              TargetNameInTabbedState="BottomPane"
+                              DockAbility="Tabbed">
+                <Grid Margin="12">
+                    <StackPanel Spacing="4" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="Tabbed Pane" FontWeight="SemiBold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="DockAbility='Tabbed'"
+                                   Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </docking:DockPane>
+
+        </docking:SfDockingManager>
+    </Grid>
+</Page>
