@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AutoHide (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "AutoHide (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

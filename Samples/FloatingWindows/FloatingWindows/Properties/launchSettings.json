@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FloatingWindows (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "FloatingWindows (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

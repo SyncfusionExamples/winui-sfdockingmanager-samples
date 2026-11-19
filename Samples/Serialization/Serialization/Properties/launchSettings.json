@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Serialization (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Serialization (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

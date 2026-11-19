@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="Localization.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Localization"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:docking="using:Syncfusion.UI.Xaml.Docking"
+    mc:Ignorable="d">
+
+    <!--
+        This is the main content area of your application.
+        Add your UI elements here — for example, controls, layouts, and data-bound views.
+        Use 'dotnet new winui-page' to create additional pages and navigate to them via
+        the Frame in MainWindow (RootFrame).
+    -->
+    <Grid>
+        <docking:SfDockingManager x:Name="dockingManager">
+            <docking:DockPane x:Name="solutionExplorerPane" Header="Solution Explorer" DockDirection="Left">
+                <ListView Margin="8">
+                    <x:String>DockingManager.WinUI</x:String>
+                    <x:String>Src</x:String>
+                    <x:String>Testbed Samples</x:String>
+                    <x:String>MainWindow.xaml</x:String>
+                </ListView>
+            </docking:DockPane>
+
+            <docking:DockPane x:Name="propertiesPane" Header="Properties" DockDirection="Right">
+                <StackPanel Spacing="8" Margin="12">
+                    <TextBlock Text="File: MainWindow.xaml.cs" FontWeight="SemiBold" />
+                    <TextBlock Text="Build Action: Compile" />
+                    <TextBlock Text="Copy to Output: Do not copy" />
+                </StackPanel>
+            </docking:DockPane>
+
+            <docking:DockPane x:Name="outputPane" Header="Output" DockDirection="Bottom">
+                <TextBox Text="Build started... Build succeeded: 0 errors, 0 warnings." IsReadOnly="True" AcceptsReturn="True"/>
+            </docking:DockPane>
+
+            <docking:DockPane x:Name="toolboxPane" Header="Toolbox" DockDirection="Top" DockState="Document"/>
+        </docking:SfDockingManager>
+    </Grid>
+</Page>
