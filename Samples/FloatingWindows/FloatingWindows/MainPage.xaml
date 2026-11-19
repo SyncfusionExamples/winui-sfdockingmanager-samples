@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="FloatingWindows.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:FloatingWindows"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:docking="using:Syncfusion.UI.Xaml.Docking"
+    mc:Ignorable="d">
+
+    <!--
+        This is the main content area of your application.
+        Add your UI elements here — for example, controls, layouts, and data-bound views.
+        Use 'dotnet new winui-page' to create additional pages and navigate to them via
+        the Frame in MainWindow (RootFrame).
+    -->
+    <Grid>
+        <docking:SfDockingManager>
+            <docking:DockPane
+                x:Name="DockTargetPane"
+                Header="Dock Target"
+                DockDirection="Left"
+                DockState="Docked">
+                <TextBlock
+                        Text="Floating windows can be docked  here" />
+            </docking:DockPane>
+
+            <docking:DockPane Header="Floating" DockState="Floating">
+                <TextBlock Text="This floating pane can be moved, resized, and docked anywhere within the layout." TextWrapping="Wrap" />
+            </docking:DockPane>
+
+            <docking:DockPane
+                x:Name="MainWindow"
+                Header="MainWindow"
+                DockState="Document">
+                <TextBlock
+                        Text="Drop the floating pane here to make it a document" />
+            </docking:DockPane>
+
+            <docking:DockPane
+                x:Name="propertiesPane"
+                Header="Properties"
+                DockState="Docked" DockDirection="Right">
+                <TextBlock Text="Drop the floating pane here to make it a tabbed."/>
+            </docking:DockPane>
+
+            <docking:DockPane
+                Header="Events"
+                DockState="Tabbed"
+                TargetNameInTabbedState="propertiesPane" DockDirection="Right">
+                <TextBlock Text="Drop the floating pane here to make it a tabbed."/>
+            </docking:DockPane>
+        </docking:SfDockingManager>
+    </Grid>
+</Page>

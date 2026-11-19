@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TabbedGroup (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TabbedGroup (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="Serialization.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Serialization"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:syncfusion="using:Syncfusion.UI.Xaml.Docking"
+    mc:Ignorable="d">
+
+    <!--
+        This is the main content area of your application.
+        Add your UI elements here — for example, controls, layouts, and data-bound views.
+        Use 'dotnet new winui-page' to create additional pages and navigate to them via
+        the Frame in MainWindow (RootFrame).
+    -->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="Save Layout" Click="Button_Click"/>
+            <Button Content="Load Layout" Click="Button_Click_1"/>
+        </StackPanel>
+        <syncfusion:SfDockingManager Height="500"
+x:Name="dockingManager"
+Grid.Row="1"
+Margin="4">
+            <syncfusion:DockPane
+   x:Name="toolBox"
+   Header="Toolbox"
+   DockDirection="Left"
+   >
+            </syncfusion:DockPane>
+
+            <syncfusion:DockPane
+   x:Name="serverExplorer"
+   Header="Server Explorer"
+   DockDirection="Bottom"
+   DockState="Document"
+   >
+            </syncfusion:DockPane>
+
+            <syncfusion:DockPane
+   x:Name="bottomWindow"
+   Header="Output"
+   DockDirection="Bottom"
+   DockState="Tabbed"
+   >
+            </syncfusion:DockPane>
+
+            <syncfusion:DockPane
+   x:Name="tabbedWindow"
+   Header="Error List"
+   DockDirection="Right"
+    TargetNameInTabbedState="bottomWindow" DockState="Tabbed">
+            </syncfusion:DockPane>
+
+            <syncfusion:DockPane
+   x:Name="solutionExplorer"
+   Header="Solution Explorer"
+   DockDirection="Right"
+   >
+            </syncfusion:DockPane>
+
+            <syncfusion:DockPane
+   x:Name="teamExplorer"
+   Header="Team Explorer"
+   DockState="Document"
+  />
+        </syncfusion:SfDockingManager>
+    </Grid>
+</Page>

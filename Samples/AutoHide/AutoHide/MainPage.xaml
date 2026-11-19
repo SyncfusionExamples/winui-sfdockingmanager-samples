@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="AutoHide.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:AutoHide"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:syncfusion="using:Syncfusion.UI.Xaml.Docking"
+    mc:Ignorable="d">
+
+    <!--
+        This is the main content area of your application.
+        Add your UI elements here — for example, controls, layouts, and data-bound views.
+        Use 'dotnet new winui-page' to create additional pages and navigate to them via
+        the Frame in MainWindow (RootFrame).
+    -->
+    <Grid>
+        <syncfusion:SfDockingManager Height="540"
+x:Name="dockingManager"
+Grid.Row="1"
+Margin="4">
+            <!-- Left -->
+            <syncfusion:DockPane
+   x:Name="toolBox"
+   Header="Toolbox"
+   DockDirection="Left"
+                DockState="AutoHidden">
+                <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center">
+      ToolBox Pane
+                </TextBlock>
+            </syncfusion:DockPane>
+
+            <!-- Right -->
+            <syncfusion:DockPane
+   x:Name="serverExplorer"
+   Header="Server Explorer"
+   DockDirection="Top"
+   DockState="AutoHidden">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+       Server Explorer Pane
+                </TextBlock>
+            </syncfusion:DockPane>
+
+            <!-- All -->
+            <syncfusion:DockPane
+   x:Name="bottomWindow"
+   Header="Output"
+   DockDirection="Bottom"
+   DockState="Tabbed">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+      Tabbed Window
+                </TextBlock>
+            </syncfusion:DockPane>
+
+            <!-- Document -->
+            <syncfusion:DockPane
+   x:Name="tabbedWindow"
+   Header="Error List"
+   DockDirection="Right" TargetNameInTabbedState="bottomWindow" DockState="Tabbed">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+       Tabbed Window
+                </TextBlock>
+            </syncfusion:DockPane>
+
+            <!-- Top -->
+            <syncfusion:DockPane
+   x:Name="solutionExplorer"
+   Header="Solution Explorer"
+   DockDirection="Right"
+                DockState="AutoHidden">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+       Solution Pane
+                </TextBlock>
+            </syncfusion:DockPane>
+
+            <!-- None -->
+            <syncfusion:DockPane
+   x:Name="teamExplorer"
+   Header="Team Explorer"
+   DockDirection="Bottom"
+   DockState="AutoHidden">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+       AutoHidden Pane
+                </TextBlock>
+            </syncfusion:DockPane>
+
+            <!-- All -->
+            <syncfusion:DockPane
+   x:Name="integration"
+   Header="Mainwindow.cs"
+   DockState="Document">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+       Document Pane
+                </TextBlock>
+            </syncfusion:DockPane>
+
+            <!-- Tabbed -->
+            <syncfusion:DockPane
+   x:Name="features"
+   Header="Mainwindow.xaml.cs"
+   DockState="Document">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+      Document Pane
+                </TextBlock>
+            </syncfusion:DockPane>
+
+            <!-- Document -->
+            <syncfusion:DockPane
+   x:Name="startPage"
+   Header="Start Page"
+   DockState="Document">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+     Document Pane
+                </TextBlock>
+            </syncfusion:DockPane>
+
+        </syncfusion:SfDockingManager>
+    </Grid>
+</Page>
